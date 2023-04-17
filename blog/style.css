@@ -1,14 +1,18 @@
+html {
+    font-family: 'Lora', serif;
+}
+
 body {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
-    background-color: blanchedalmond;
+    background-color: #f6fff8;
 }
 
 .body {
-    width: 70%;
-    background-color: antiquewhite;
+    width: 60%;
+    background-color: #eaf4f4;
     height: 200vh;
     margin: 0;
     padding: 0;
@@ -21,6 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #eaf4f4;
 }
 
 h1 {
