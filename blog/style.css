@@ -1,5 +1,6 @@
 html {
     font-family: 'Lora', serif;
+    color: #1E2019;
 }
 
 body {
@@ -19,15 +20,109 @@ body {
 }
 
 .header {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 15vh;
     background-color: #CEDFD9;
+    position: sticky;
+    top: -8vh;
 }
 
-h1 {
+.title {
+    width: 100%;
     text-align: center;
-    margin: 0;
+}
+
+.headerlist>ul {
     padding: 0;
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerlist>ul>li {
+    width: calc(100%/5);
+    text-align: center;
+    position: relative;
+    padding: 2%;
+}
+
+.headerlist>ul>li::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #587B7F;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: left top;
+    /*左上基点*/
+}
+
+
+/*現在地とhoverの設定*/
+
+.headerlist>ul>li:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.article {
+    height: 80vh;
+    width: 40vw;
+    background: #587B7F;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+}
+
+.text {
+    height: 20%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-title,
+.description,
+.thumbnail,
+.date {
+    width: 90%;
+    margin: 0;
+}
+
+.article-title {
+    text-align: center;
+    padding: 5%;
+}
+
+.thumbnail {
+    height: 60%;
+    border-radius: 2%;
+}
+
+.date {
+    text-align: right
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #1E2019;
 }
